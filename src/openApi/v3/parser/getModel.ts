@@ -149,7 +149,7 @@ export const getModel = (
         return model;
     }
 
-    if (definition.type === 'object') {
+    if (definition.type === 'object' || definition.properties) {
         if (definition.properties) {
             model.export = 'interface';
             model.type = 'any';
